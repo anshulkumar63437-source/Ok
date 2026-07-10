@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RankSetu Digital — SEO &amp; Google Ads Services</title>
+<meta name="description" content="RankSetu Digital: SEO, Google Ads (PPC), Local SEO aur Website services. Apne business ko Google ke Page 1 tak pahuchayein. WhatsApp par abhi baat karein.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1B2A;
+    --ink-soft:#16283D;
+    --paper:#F3F5F0;
+    --paper-dim:#E9ECE4;
+    --coral:#FF4D3D;
+    --coral-dark:#E23A2C;
+    --teal:#0B6E64;
+    --teal-light:#0F8C7F;
+    --gold:#F5B700;
+    --text-dim:#5C6B7A;
+    --line: rgba(14,27,42,0.10);
+    --radius: 18px;
+    --shadow: 0 10px 30px rgba(14,27,42,0.10);
+    --maxw: 1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  h1,h2,h3,h4{font-family:'Unbounded',sans-serif;margin:0;line-height:1.15;letter-spacing:-0.01em;}
+  p{margin:0;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'Space Mono',monospace;}
+  section{position:relative;}
+  ::selection{background:var(--coral);color:#fff;}
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible{
+    outline:3px solid var(--teal); outline-offset:3px; border-radius:6px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;justify-content:center;
+    padding:15px 26px;border-radius:100px;font-weight:700;font-size:0.98rem;
+    border:2px solid transparent;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn-coral{background:var(--coral);color:#fff;box-shadow:0 8px 22px rgba(255,77,61,0.35);}
+  .btn-coral:hover{background:var(--coral-dark);box-shadow:0 10px 26px rgba(255,77,61,0.45);}
+  .btn-outline{background:transparent;border-color:rgba(255,255,255,0.35);color:#fff;}
+  .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+  .btn-ink{background:var(--ink);color:#fff;}
+  .btn-ink:hover{background:var(--ink-soft);}
+  .btn-sm{padding:10px 18px;font-size:0.85rem;}
+  .btn svg{width:18px;height:18px;flex:none;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(243,245,240,0.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Unbounded',sans-serif;font-weight:700;font-size:1.15rem;}
+  .logo .mark{
+    width:38px;height:38px;border-radius:11px;background:var(--ink);
+    display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .logo .mark svg{width:20px;height:20px;}
+  .nav-links{display:flex;gap:32px;align-items:center;}
+  .nav-links a{font-weight:600;font-size:0.94rem;color:var(--ink);opacity:0.8;transition:opacity .15s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{display:flex;align-items:center;gap:12px;}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+  .burger span{display:block;width:24px;height:2.5px;background:var(--ink);margin:5px 0;border-radius:2px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--ink);color:#fff;overflow:hidden;
+    padding:64px 0 90px;
+  }
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--gold);background:rgba(245,183,0,0.12);border:1px solid rgba(245,183,0,0.35);
+    padding:7px 14px;border-radius:100px;margin-bottom:22px;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+  .hero h1{font-size:clamp(2.1rem, 4.4vw, 3.4rem);font-weight:700;}
+  .hero h1 .accent{color:var(--coral);}
+  .hero p.lead{margin-top:20px;font-size:1.08rem;color:#C7D1DA;max-width:540px;}
+  .hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+  .trust-row{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap;}
+  .trust-row .stat b{display:block;font-family:'Space Mono',monospace;font-size:1.5rem;color:#fff;}
+  .trust-row .stat span{font-size:0.82rem;color:#93A2AF;}
+
+  /* search mock — signature element */
+  .search-mock{
+    background:#fff;border-radius:20px;padding:22px;color:var(--ink);
+    box-shadow:0 30px 60px rgba(0,0,0,0.35);
+    transform:rotate(1.2deg);
+  }
+  .search-bar{
+    display:flex;align-items:center;gap:12px;background:var(--paper);
+    border:1px solid var(--line);border-radius:100px;padding:13px 20px;
+  }
+  .search-bar svg{width:18px;height:18px;color:var(--text-dim);flex:none;}
+  .search-bar .typed{font-size:0.95rem;color:var(--ink);white-space:nowrap;overflow:hidden;border-right:2px solid var(--coral);
+    animation:typing 5s steps(28) infinite, caret 0.8s steps(2) infinite;
+    display:inline-block;max-width:0;}
+  @keyframes typing{
+    0%{max-width:0;} 35%{max-width:19ch;} 75%{max-width:19ch;} 90%{max-width:0;} 100%{max-width:0;}
+  }
+  @keyframes caret{50%{border-color:transparent;}}
+  .result-card{
+    margin-top:16px;border:1px solid var(--line);border-radius:14px;padding:16px;
+    background:linear-gradient(180deg, rgba(11,110,100,0.05), rgba(11,110,100,0));
+  }
+  .result-card .badge{
+    display:inline-block;background:var(--teal);color:#fff;font-family:'Space Mono',monospace;
+    font-size:0.72rem;padding:3px 9px;border-radius:6px;margin-bottom:8px;
+  }
+  .result-card .r-title{font-weight:700;font-size:0.98rem;color:var(--teal-light);}
+  .result-card .r-url{font-family:'Space Mono',monospace;font-size:0.76rem;color:#4a7a10;margin:3px 0 6px;}
+  .result-card .r-desc{font-size:0.85rem;color:var(--text-dim);}
+  .spark{display:flex;align-items:flex-end;gap:5px;height:46px;margin-top:16px;}
+  .spark i{
+    display:block;width:100%;background:var(--coral);border-radius:4px 4px 0 0;
+    animation:grow 2.6s ease-in-out infinite;
+  }
+  .spark i:nth-child(1){height:30%;animation-delay:0s;}
+  .spark i:nth-child(2){height:45%;animation-delay:.15s;}
+  .spark i:nth-child(3){height:38%;animation-delay:.3s;}
+  .spark i:nth-child(4){height:62%;animation-delay:.45s;}
+  .spark i:nth-child(5){height:55%;animation-delay:.6s;}
+  .spark i:nth-child(6){height:80%;animation-delay:.75s;}
+  .spark i:nth-child(7){height:100%;background:var(--teal);animation-delay:.9s;}
+  @keyframes grow{0%,100%{opacity:0.7;transform:scaleY(0.94);}50%{opacity:1;transform:scaleY(1);}}
+
+  /* ---------- Section shells ---------- */
+  .section{padding:96px 0;}
+  .section-tight{padding:72px 0;}
+  .kicker{
+    font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--coral);margin-bottom:12px;display:block;font-weight:700;
+  }
+  .section-head{max-width:640px;margin-bottom:52px;}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.35rem);}
+  .section-head p{margin-top:14px;color:var(--text-dim);font-size:1.02rem;}
+  .on-dark{background:var(--ink);color:#fff;}
+  .on-dark .text-dim{color:#93A2AF;}
+
+  /* ---------- Services ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .service-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+  .service-card .icon{
+    width:50px;height:50px;border-radius:13px;background:var(--paper-dim);
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  }
+  .service-card .icon svg{width:24px;height:24px;color:var(--teal);}
+  .service-card h3{font-size:1.1rem;margin-bottom:9px;}
+  .service-card p{color:var(--text-dim);font-size:0.93rem;}
+  .service-card .tag{
+    display:inline-block;margin-top:14px;font-family:'Space Mono',monospace;font-size:0.72rem;
+    color:var(--coral);
+  }
+
+  /* ---------- Process ---------- */
+  .process-list{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+  .process-list::before{
+    content:"";position:absolute;top:26px;left:6%;right:6%;height:2px;
+    background:repeating-linear-gradient(90deg, rgba(255,255,255,0.25) 0 10px, transparent 10px 20px);
+  }
+  .process-step{position:relative;padding:0 18px;}
+  .process-step .num{
+    width:52px;height:52px;border-radius:50%;background:var(--coral);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;
+    font-weight:700;font-size:1.05rem;margin-bottom:22px;position:relative;z-index:1;
+  }
+  .process-step h4{font-size:1.05rem;margin-bottom:8px;color:#fff;}
+  .process-step p{font-size:0.9rem;color:#93A2AF;}
+
+  /* ---------- Results ---------- */
+  .results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:56px;}
+  .result-stat{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:left;
+  }
+  .result-stat b{
+    font-family:'Space Mono',monospace;font-size:2rem;color:var(--ink);display:block;
+  }
+  .result-stat b .accent{color:var(--coral);}
+  .result-stat span{font-size:0.85rem;color:var(--text-dim);}
+
+  .case-panel{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:36px;
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+  }
+  .bars{display:flex;align-items:flex-end;gap:26px;height:170px;}
+  .bar-group{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1;height:100%;justify-content:flex-end;}
+  .bar-group .bar{width:100%;border-radius:8px 8px 0 0;}
+  .bar-group .bar.before{background:var(--paper-dim);height:26%;}
+  .bar-group .bar.after{background:var(--teal);height:88%;}
+  .bar-group .lbl{font-family:'Space Mono',monospace;font-size:0.74rem;color:var(--text-dim);}
+  .case-copy .kicker{margin-bottom:10px;}
+  .case-copy h3{font-size:1.3rem;margin-bottom:12px;}
+  .case-copy p{color:var(--text-dim);font-size:0.95rem;}
+
+  /* ---------- Pricing ---------- */
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .price-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;
+    display:flex;flex-direction:column;
+  }
+  .price-card.featured{
+    background:var(--ink);color:#fff;border-color:var(--ink);position:relative;transform:translateY(-10px);
+    box-shadow:0 24px 50px rgba(14,27,42,0.28);
+  }
+  .price-card.featured .price-card-badge{
+    position:absolute;top:-14px;right:28px;background:var(--gold);color:var(--ink);
+    font-family:'Space Mono',monospace;font-size:0.7rem;font-weight:700;padding:5px 12px;border-radius:100px;
+  }
+  .price-card h3{font-size:1.15rem;margin-bottom:6px;}
+  .price-card .price{font-family:'Space Mono',monospace;font-size:2rem;margin:14px 0 6px;}
+  .price-card .price span{font-size:0.85rem;font-weight:400;opacity:0.7;}
+  .price-card .price-note{font-size:0.82rem;color:var(--text-dim);margin-bottom:22px;}
+  .price-card.featured .price-note{color:#93A2AF;}
+  .price-card ul{margin-bottom:26px;flex:1;}
+  .price-card li{
+    display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;padding:8px 0;
+    border-top:1px solid var(--line);
+  }
+  .price-card.featured li{border-top:1px solid rgba(255,255,255,0.12);}
+  .price-card li:first-child{border-top:none;}
+  .price-card li svg{width:16px;height:16px;color:var(--teal);flex:none;margin-top:3px;}
+  .price-card.featured li svg{color:var(--gold);}
+  .price-card .btn{width:100%;}
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .testi-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;
+  }
+  .testi-stars{color:var(--gold);font-size:0.9rem;margin-bottom:14px;letter-spacing:2px;}
+  .testi-card p.quote{font-size:0.95rem;color:var(--ink);margin-bottom:20px;}
+  .testi-person{display:flex;align-items:center;gap:12px;}
+  .testi-avatar{
+    width:42px;height:42px;border-radius:50%;background:var(--teal);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:'Unbounded',sans-serif;font-weight:600;flex:none;
+  }
+  .testi-person b{display:block;font-size:0.9rem;}
+  .testi-person span{font-size:0.78rem;color:var(--text-dim);}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:760px;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 22px;margin-bottom:14px;
+  }
+  summary{
+    cursor:pointer;font-weight:700;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1rem;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";font-size:1.4rem;color:var(--coral);font-weight:400;transition:transform .2s;flex:none;margin-left:14px;
+  }
+  details[open] summary::after{transform:rotate(45deg);}
+  details p{padding:0 0 18px;color:var(--text-dim);font-size:0.92rem;}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background:linear-gradient(135deg, var(--teal) 0%, #0B4A44 100%);
+    border-radius:28px;padding:56px 48px;color:#fff;
+    display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;
+  }
+  .final-cta h2{font-size:clamp(1.5rem,2.6vw,2rem);max-width:480px;}
+  .final-cta p{color:rgba(255,255,255,0.82);margin-top:12px;max-width:460px;}
+  .final-cta .ctas{display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:#93A2AF;padding:56px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  .footer-grid h4{color:#fff;font-size:0.85rem;margin-bottom:16px;font-family:'Inter',sans-serif;letter-spacing:0.03em;}
+  .footer-grid li{margin-bottom:10px;font-size:0.88rem;}
+  .footer-grid a:hover{color:#fff;}
+  .footer-brand p{margin-top:14px;font-size:0.88rem;max-width:280px;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.8rem;
+  }
+
+  /* ---------- Floating WhatsApp/Call toggle ---------- */
+  .contact-fab{
+    position:fixed;right:22px;bottom:22px;z-index:100;
+    display:flex;flex-direction:column;align-items:flex-end;gap:12px;
+  }
+  .fab-switch{
+    display:flex;align-items:center;background:#fff;border-radius:100px;padding:5px;
+    box-shadow:0 12px 30px rgba(14,27,42,0.22);border:1px solid var(--line);
+    font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;
+  }
+  .fab-switch button{
+    border:none;background:transparent;padding:9px 16px;border-radius:100px;cursor:pointer;
+    color:var(--text-dim);transition:color .2s;position:relative;z-index:1;
+  }
+  .fab-switch{position:relative;}
+  .fab-switch .slider{
+    position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:100px;
+    background:var(--ink);transition:transform .25s ease;z-index:0;
+  }
+  .fab-switch[data-mode="call"] .slider{transform:translateX(0);}
+  .fab-switch[data-mode="whatsapp"] .slider{transform:translateX(100%);}
+  .fab-switch button.active{color:#fff;}
+  .fab-action{
+    width:64px;height:64px;border-radius:50%;background:var(--coral);color:#fff;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 14px 32px rgba(255,77,61,0.45);
+    border:none;cursor:pointer;transition:background .2s, transform .2s;
+  }
+  .fab-action:hover{transform:scale(1.05);}
+  .fab-action[data-mode="whatsapp"]{background:#25D366;box-shadow:0 14px 32px rgba(37,211,102,0.45);}
+  .fab-action svg{width:28px;height:28px;}
+  .fab-ring{
+    position:absolute;inset:0;border-radius:50%;border:2px solid rgba(37,211,102,0.6);
+    animation:ring 2.2s infinite;pointer-events:none;
+  }
+  .fab-action[data-mode="call"] .fab-ring{border-color:rgba(255,77,61,0.5);}
+  @keyframes ring{0%{transform:scale(1);opacity:0.8;}100%{transform:scale(1.6);opacity:0;}}
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 960px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .search-mock{transform:none;}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .results-grid{grid-template-columns:repeat(2,1fr);}
+    .pricing-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
+    .price-card.featured{transform:none;}
+    .testi-grid{grid-template-columns:1fr;}
+    .process-list{grid-template-columns:repeat(2,1fr);row-gap:36px;}
+    .process-list::before{display:none;}
+    .case-panel{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width: 700px){
+    .nav-links{display:none;}
+    .burger{display:block;}
+    .nav-cta .btn span.long{display:none;}
+    .services-grid{grid-template-columns:1fr;}
+    .results-grid{grid-template-columns:1fr 1fr;}
+    .process-list{grid-template-columns:1fr;}
+    .final-cta{padding:36px 26px;flex-direction:column;align-items:flex-start;}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
+    .section{padding:64px 0;}
+  }
+
+  /* mobile nav drawer */
+  .mobile-drawer{
+    display:none;position:fixed;inset:0;background:rgba(14,27,42,0.55);z-index:60;
+  }
+  .mobile-drawer.open{display:block;}
+  .mobile-panel{
+    position:absolute;top:0;right:0;height:100%;width:78%;max-width:320px;background:#fff;
+    padding:26px;display:flex;flex-direction:column;gap:6px;
+  }
+  .mobile-panel a{padding:14px 6px;font-weight:700;border-bottom:1px solid var(--line);}
+  .mobile-close{align-self:flex-end;background:none;border:none;font-size:1.6rem;cursor:pointer;padding:6px;margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <a href="#top" class="logo">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 16L9 10L13 13L20 5" stroke="#F5B700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 5H20V10" stroke="#F5B700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      RankSetu
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#results">Results</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-coral btn-sm" href="https://wa.me/917500863870?text=Namaste!%20Mujhe%20apni%20website%20SEO%20aur%20Google%20Ads%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.55-1.16-2.96 0-1.4.73-2.09 1-2.38.24-.27.53-.34.71-.34h.5c.16 0 .38-.02.58.45.24.55.79 1.92.86 2.06.07.14.11.3.02.48-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.13-.28.28-.13.55.16.27.7 1.16 1.51 1.88 1.04.93 1.9 1.22 2.18 1.36.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.35-.22.6-.13.24.09 1.55.73 1.82.86.27.13.44.2.51.31.07.11.07.65-.16 1.32Z"/></svg>
+        <span class="long">WhatsApp</span>
+      </a>
+    </div>
+    <button class="burger" id="burgerBtn" aria-label="Menu kholein">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-panel">
+    <button class="mobile-close" id="mobileClose" aria-label="Band karein">&times;</button>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#results">Results</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://wa.me/917500863870" target="_blank" rel="noopener">WhatsApp karein</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> SEO · Google Ads · PPC Partner</span>
+        <h1>Apki website ko Google ke <span class="accent">Page&nbsp;1</span> tak pahunchane wale results</h1>
+        <p class="lead">Hum small aur growing businesses ke liye SEO rank badhate hain aur Google Ads se sahi customer tak seedha pahunchate hain — bina jhoothe waade, sirf trackable results.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-coral" href="https://wa.me/917500863870?text=Namaste!%20Mujhe%20free%20website%20audit%20chahiye." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Z"/></svg>
+            Free Audit — WhatsApp par
+          </a>
+          <a class="btn btn-outline" href="tel:+917500863870">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now
+          </a>
+        </div>
+        <div class="trust-row">
+          <div class="stat"><b class="mono">120+</b><span>Businesses ranked</span></div>
+          <div class="stat"><b class="mono">3.4×</b><span>Avg. traffic growth</span></div>
+          <div class="stat"><b class="mono">₹2.1Cr+</b><span>Ad spend managed</span></div>
+          <div class="stat"><b class="mono">4.9★</b><span>Client rating</span></div>
+        </div>
+      </div>
+
+      <div class="search-mock" aria-hidden="true">
+        <div class="search-bar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <span class="typed">best seo agency near me</span>
+        </div>
+        <div class="result-card">
+          <span class="badge">Ad · #1 Position</span>
+          <div class="r-title">RankSetu Digital — SEO &amp; Google Ads</div>
+          <div class="r-url">www.ranksetu.in</div>
+          <div class="r-desc">120+ businesses ki organic ranking aur leads badhayi. Free website audit abhi lein.</div>
+        </div>
+        <div class="spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Hamari Services</span>
+        <h2>Ek hi jagah par apki online growth ka poora setup</h2>
+        <p>Strategy se lekar execution aur monthly reporting tak — sab kuch hum sambhalte hain, aap sirf naye customers ki calls attend karein.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8 13 13.7l-3-3L4 16.7"/></svg></div>
+          <h3>SEO (Search Engine Optimization)</h3>
+          <p>On-page, technical aur off-page SEO — apki site Google ke organic results mein upar aaye, bina ad spend ke.</p>
+          <span class="tag mono">→ Organic ranking</span>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+          <h3>Google Ads (PPC)</h3>
+          <p>Search, Display aur Shopping campaigns jo sahi keyword aur sahi audience par targeted hon — har rupaya track hota hai.</p>
+          <span class="tag mono">→ Instant leads</span>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Local SEO &amp; Google Business Profile</h3>
+          <p>"Near me" searches mein apka business top par — GBP optimization, reviews aur local citations ke saath.</p>
+          <span class="tag mono">→ Map pack ranking</span>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+          <h3>Social Media Marketing</h3>
+          <p>Instagram aur Facebook par content, ads aur engagement strategy jo brand ko yaad rakhwaye.</p>
+          <span class="tag mono">→ Brand recall</span>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
+          <h3>Website &amp; Landing Pages</h3>
+          <p>Fast, mobile-friendly aur conversion ke liye design ki gayi websites aur landing pages.</p>
+          <span class="tag mono">→ Higher conversions</span>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h8l6 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6M9 13h6M9 17h6"/></svg></div>
+          <h3>Content &amp; Copywriting</h3>
+          <p>SEO-friendly blogs, product descriptions aur ad copy jo Google aur customer dono ko pasand aaye.</p>
+          <span class="tag mono">→ Keyword-driven content</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section on-dark" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Hamara Process</span>
+        <h2 style="color:#fff">4 steps mein shuruaat se result tak</h2>
+        <p class="text-dim">Har client ka ek hi tareeka: pehle samajhna, phir plan banana, execute karna, aur numbers ke saath dikhana.</p>
+      </div>
+      <div class="process-list">
+        <div class="process-step">
+          <div class="num">01</div>
+          <h4>Discovery Call</h4>
+          <p>WhatsApp ya call par apka business, goals aur competitors samajhte hain.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">02</div>
+          <h4>Strategy &amp; Audit</h4>
+          <p>Free website &amp; keyword audit karke ek clear roadmap banate hain.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">03</div>
+          <h4>Execution</h4>
+          <p>SEO, Ads aur content par kaam shuru — sab kuch aapki approval ke saath.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">04</div>
+          <h4>Report &amp; Scale</h4>
+          <p>Monthly report milta hai — jo kaam karta hai, usse aur scale karte hain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="section" id="results">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Results</span>
+        <h2>Numbers jo baat karte hain</h2>
+        <p>Hum vanity metrics nahi, business ke liye zaroori metrics par focus karte hain — traffic, calls aur sales.</p>
+      </div>
+      <div class="results-grid">
+        <div class="result-stat"><b>+<span class="accent">186%</span></b><span>Organic traffic (6 mahine)</span></div>
+        <div class="result-stat"><b>₹<span class="accent">38</span></b><span>Avg. cost-per-lead</span></div>
+        <div class="result-stat"><b><span class="accent">92</span>/100</b><span>Avg. page speed score</span></div>
+        <div class="result-stat"><b><span class="accent">14</span></b><span>Keywords on Page 1 (avg.)</span></div>
+      </div>
+
+      <div class="case-panel">
+        <div class="bars" aria-hidden="true">
+          <div class="bar-group"><div class="bar before"></div><span class="lbl mono">BEFORE</span></div>
+          <div class="bar-group"><div class="bar after"></div><span class="lbl mono">AFTER</span></div>
+        </div>
+        <div class="case-copy">
+          <span class="kicker">Case Study</span>
+          <h3>Local furniture store: 4 mahine mein 3.4× organic leads</h3>
+          <p>Local SEO, Google Business Profile optimization aur targeted Google Ads campaign se monthly enquiries 22 se badh kar 75+ ho gayi — bina extra staff badhaye.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Pricing</span>
+        <h2>Simple, transparent packages</h2>
+        <p>Har package customize ho sakta hai apke business size aur goals ke hisaab se — WhatsApp par baat karke final karte hain.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="price-card">
+          <h3>Starter SEO</h3>
+          <div class="price mono">₹9,999<span>/mahina</span></div>
+          <p class="price-note">Naye businesses ke liye jo local visibility chahte hain</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>On-page SEO (up to 10 pages)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Google Business Profile setup</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Monthly ranking report</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>WhatsApp support</li>
+          </ul>
+          <a class="btn btn-ink" href="https://wa.me/917500863870?text=Mujhe%20Starter%20SEO%20package%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">Enquire karein</a>
+        </div>
+
+        <div class="price-card featured">
+          <span class="price-card-badge">Most Popular</span>
+          <h3>Growth SEO + Ads</h3>
+          <div class="price mono">₹24,999<span>/mahina</span></div>
+          <p class="price-note">Growing businesses ke liye — organic + paid, dono</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Full SEO (unlimited pages)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Google Ads management</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Landing page optimization</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Bi-weekly strategy call</li>
+          </ul>
+          <a class="btn btn-coral" href="https://wa.me/917500863870?text=Mujhe%20Growth%20SEO%20%2B%20Ads%20package%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">Enquire karein</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Scale Full Funnel</h3>
+          <div class="price mono">₹49,999<span>/mahina</span></div>
+          <p class="price-note">Established businesses ke liye — aggressive growth</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>SEO + Google Ads + Social</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Content &amp; creative production</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Dedicated account manager</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Weekly reporting call</li>
+          </ul>
+          <a class="btn btn-ink" href="https://wa.me/917500863870?text=Mujhe%20Scale%20Full%20Funnel%20package%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">Enquire karein</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section-tight">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Client Kya Kehte Hain</span>
+        <h2>Real business, real results</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="quote">3 mahine mein hamare Google searches double ho gaye. Team bahut responsive hai, WhatsApp par turant reply milta hai.</p>
+          <div class="testi-person">
+            <div class="testi-avatar">R</div>
+            <div><b>Rakesh Sharma</b><span>Furniture Store, Jaipur</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="quote">Google Ads campaign shuru hote hi calls aani shuru ho gayi. Cost-per-lead bhi kam hua aur quality bhi achi mili.</p>
+          <div class="testi-person">
+            <div class="testi-avatar">S</div>
+            <div><b>Sunita Verma</b><span>Interior Designer, Indore</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="quote">Reporting bahut transparent hai — har mahine pata chalta hai paisa kahan lag raha hai aur result kya mil raha hai.</p>
+          <div class="testi-person">
+            <div class="testi-avatar">A</div>
+            <div><b>Amit Khanna</b><span>Clinic Owner, Lucknow</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">FAQ</span>
+        <h2>Aapke sawaalon ke jawab</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>SEO mein result aane mein kitna time lagta hai?</summary>
+          <p>Aam taur par 60-90 din mein initial improvement dikhna shuru hota hai, aur strong ranking ke liye 4-6 mahine tak lag sakte hain — yeh keyword competition par depend karta hai.</p>
+        </details>
+        <details>
+          <summary>Google Ads ka budget kam se kam kitna hona chahiye?</summary>
+          <p>Local businesses ke liye ₹10,000-15,000/mahina se shuruaat achi rehti hai. Hum aapke industry aur goals ke hisaab se sahi budget suggest karte hain.</p>
+        </details>
+        <details>
+          <summary>Kya koi long-term contract signup karna zaroori hai?</summary>
+          <p>Nahi. Hamare packages month-to-month hote hain. SEO mein best result ke liye 3+ mahine recommend karte hain, lekin koi lock-in nahi hai.</p>
+        </details>
+        <details>
+          <summary>Reporting kaise milti hai?</summary>
+          <p>Har mahine ek clear report WhatsApp aur email par milti hai — traffic, ranking, ad performance aur leads sab kuch simple language mein.</p>
+        </details>
+        <details>
+          <summary>Main kaise shuru karu?</summary>
+          <p>Bas neeche diye WhatsApp button par click karein ya call karein — hum free website audit ke saath baat shuru karte hain.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="final-cta">
+        <div>
+          <h2>Ready ho apne business ko Google par top par le jaane ke liye?</h2>
+          <p>Free website &amp; keyword audit ke liye abhi WhatsApp karein ya seedha call lagayein — reply 24 ghante ke andar guaranteed.</p>
+        </div>
+        <div class="ctas">
+          <a class="btn btn-coral" href="https://wa.me/917500863870?text=Namaste!%20Mujhe%20free%20audit%20chahiye." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Z"/></svg>
+            WhatsApp: 75008 63870
+          </a>
+          <a class="btn btn-outline" href="tel:+917500863870">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="color:#fff;">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 16L9 10L13 13L20 5" stroke="#F5B700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 5H20V10" stroke="#F5B700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          RankSetu
+        </div>
+        <p>SEO, Google Ads aur digital growth partner — chhote aur growing businesses ke liye, results ke saath.</p>
+      </div>
+      <div>
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="#services">SEO</a></li>
+          <li><a href="#services">Google Ads</a></li>
+          <li><a href="#services">Local SEO</a></li>
+          <li><a href="#services">Website Design</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a href="tel:+917500863870">Call: 75008 63870</a></li>
+          <li><a href="https://wa.me/917500863870" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:hello@ranksetu.in">hello@ranksetu.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RankSetu Digital. All rights reserved.</span>
+      <span>Made with care for businesses that want to grow.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating call / WhatsApp toggle -->
+<div class="contact-fab">
+  <div class="fab-switch" id="fabSwitch" data-mode="whatsapp">
+    <span class="slider"></span>
+    <button type="button" id="modeCall">Call</button>
+    <button type="button" id="modeWhats" class="active">WhatsApp</button>
+  </div>
+  <a class="fab-action" id="fabAction" data-mode="whatsapp" href="https://wa.me/917500863870" target="_blank" rel="noopener" aria-label="WhatsApp par message bhejein">
+    <span class="fab-ring"></span>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.55-1.16-2.96 0-1.4.73-2.09 1-2.38.24-.27.53-.34.71-.34h.5c.16 0 .38-.02.58.45.24.55.79 1.92.86 2.06.07.14.11.3.02.48-.09.19-.14.3-.28.46-.14.16-.29.36-.42.48-.14.13-.28.28-.13.55.16.27.7 1.16 1.51 1.88 1.04.93 1.9 1.22 2.18 1.36.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.35-.22.6-.13.24.09 1.55.73 1.82.86.27.13.44.2.51.31.07.11.07.65-.16 1.32Z"/></svg>
+  </a>
+</div>
+
+<script>
+  // Call / WhatsApp toggle
+  var fabSwitch = document.getElementById('fabSwitch');
+  var fabAction = document.getElementById('fabAction');
+  var modeCall = document.getElementById('modeCall');
+  var modeWhats = document.getElementById('modeWhats');
+  var PHONE = '7500863870';
+  var WA_LINK = 'https://wa.me/91' + PHONE + '?text=Namaste!%20Mujhe%20apki%20services%20ke%20baare%20mein%20jaankari%20chahiye.';
+  var TEL_LINK = 'tel:+91' + PHONE;
+
+  function setMode(mode){
+    fabSwitch.setAttribute('data-mode', mode);
+    fabAction.setAttribute('data-mode', mode);
+    if(mode === 'call'){
+      fabAction.setAttribute('href', TEL_LINK);
+      fabAction.removeAttribute('target');
+      fabAction.setAttribute('aria-label','Call karein');
+      modeCall.classList.add('active');
+      modeWhats.classList.remove('active');
+    } else {
+      fabAction.setAttribute('href', WA_LINK);
+      fabAction.setAttribute('target', '_blank');
+      fabAction.setAttribute('aria-label','WhatsApp par message bhejein');
+      modeWhats.classList.add('active');
+      modeCall.classList.remove('active');
+    }
+  }
+  modeCall.addEventListener('click', function(){ setMode('call'); });
+  modeWhats.addEventListener('click', function(){ setMode('whatsapp'); });
+  setMode('whatsapp');
+
+  // Mobile nav drawer
+  var burgerBtn = document.getElementById('burgerBtn');
+  var mobileDrawer = document.getElementById('mobileDrawer');
+  var mobileClose = document.getElementById('mobileClose');
+  burgerBtn.addEventListener('click', function(){ mobileDrawer.classList.add('open'); });
+  mobileClose.addEventListener('click', function(){ mobileDrawer.classList.remove('open'); });
+  mobileDrawer.addEventListener('click', function(e){
+    if(e.target === mobileDrawer) mobileDrawer.classList.remove('open');
+  });
+  document.querySelectorAll('.mobile-panel a').forEach(function(a){
+    a.addEventListener('click', function(){ mobileDrawer.classList.remove('open'); });
+  });
+</script>
+
+</body>
+</html>
